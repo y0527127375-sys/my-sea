@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>אתה בחרת את זה</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .background {
+            /* קריאה לקובץ שלך */
+            background-image: url('sea.jpg.jpg');
+            
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            /* הסרתי את ה-brightness כדי שהתמונה תהיה בהירה */
+            filter: none; 
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            /* הוספת שכבה שקופה מאוד רק כדי שהטקסט לא יבלע בלבן של העננים/קצף */
+            background: rgba(0, 0, 0, 0.15); 
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+            font-weight: bold;
+            /* צל חזק יותר לטקסט כדי שיראו אותו על רקע בהיר */
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        p {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            font-weight: 400;
+            text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+        }
+
+        .line {
+            width: 100px;
+            height: 3px;
+            background: white;
+            margin: 30px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="overlay">
+        <h1>אתה בחרת את זה</h1>
+        <div class="line"></div>
+        <p>קח נשימה עמוקה. הים כאן בשבילך.</p>
+    </div>
+
+</body>
+</html>
